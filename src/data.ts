@@ -200,6 +200,21 @@ export const BONUSES: BonusItem[] = [
     tag: "CONDITION PHYSIQUE & ATHLÉTISME",
     image: "/images/bono_prep_physique.webp",
     fallbackImage: "/images/bono_prep_physique.webp"
+  },
+  {
+    id: "bon-12",
+    number: 11,
+    title: "Exercices de Futsal",
+    description: "Perfectionnez la vitesse de prise de décision, la dextérité dans les espaces réduits, le pressing intense et les combinaisons rapides inspirées du futsal.",
+    originalPrice: 29,
+    tag: "ESPACES RÉDUITS & DEXTÉRITÉ",
+    image: "/images/bono_futsal.webp",
+    fallbackImage: "/images/bono_futsal.png",
+    fallbackSources: [
+      "/images/bono_futsal.webp",
+      "/images/bono_futsal.png",
+      "https://i.ibb.co/KcvQTYbm/Exerc-cios-de-Futsal-em-A-o-1.png"
+    ]
   }
 ];
 
@@ -259,8 +274,8 @@ export const FAQS: FAQItem[] = [
   },
   {
     id: "faq-5",
-    question: "Les 10 bonus offerts sont-ils réellement inclus ?",
-    answer: "Oui, les 10 bonus présentés sont inclus à 100 % gratuitement dans l'offre promotionnelle d'aujourd'hui. Ils sont automatiquement ajoutés à votre espace de téléchargement lors de votre commande."
+    question: "Les 11 bonus offerts sont-ils réellement inclus ?",
+    answer: "Oui, les 11 bonus présentés sont inclus à 100 % gratuitement dans l'offre promotionnelle d'aujourd'hui. Ils sont automatiquement ajoutés à votre espace de téléchargement lors de votre commande."
   }
 ];
 
