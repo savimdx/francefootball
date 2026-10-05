@@ -781,9 +781,6 @@ export default function App() {
                   {formattedPrice}
                 </span>
               </div>
-              <p className="text-center text-xs sm:text-sm text-slate-500 font-medium">
-                (Vous pouvez effectuer le paiement dans votre devise locale)
-              </p>
             </div>
 
             {/* Divider */}
