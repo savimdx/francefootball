@@ -29,7 +29,7 @@ export interface CurrencyContextProps {
 const CurrencyContext = createContext<CurrencyContextProps | undefined>(undefined);
 
 export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Uniform offer fixed at 5 €
+  // Uniform offer fixed at 7 €
   const initialGeo = getInitialGeoState();
   const [activeGeo, setActiveGeo] = useState<GeoDetectionResult>(initialGeo);
 
@@ -44,12 +44,12 @@ export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   }, []);
 
-  // Standard formatter: always formats as Euro (e.g. 420 -> "420 €", 5 -> "5 €")
+  // Standard formatter: always formats as Euro (e.g. 420 -> "420 €", 7 -> "7 €")
   const convertAndFormat = useCallback((val: number): string => {
     return `${val} €`;
   }, []);
 
-  // Country setter for flag/locale if needed, keeping price fixed at 5 €
+  // Country setter for flag/locale if needed, keeping price fixed at 7 €
   const setCountry = useCallback((code: string) => {
     const normalized = normalizeCountry(code);
     const config = COUNTRY_PRICING[normalized];

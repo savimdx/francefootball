@@ -1,7 +1,7 @@
 /**
  * Fixed Offer Pricing Configuration
  *
- * Offer price is fixed at 5 € across all regions.
+ * Offer price is fixed at 7 € across all regions.
  * Localization pricing algorithms and dynamic IP lookups have been removed.
  */
 
@@ -17,8 +17,8 @@ export interface CountryPricingConfig {
   flag: string;
 }
 
-export const FIXED_OFFER_PRICE = 5;
-export const FIXED_OFFER_PRICE_FORMATTED = '5 €';
+export const FIXED_OFFER_PRICE = 7;
+export const FIXED_OFFER_PRICE_FORMATTED = '7 €';
 export const FIXED_CROSSED_PRICE_FORMATTED = '420 €';
 
 export const COUNTRY_PRICING: Record<'FR' | 'CH' | 'BE' | 'DEFAULT', CountryPricingConfig> = {
@@ -88,7 +88,7 @@ export function normalizeCountry(code?: string | null): 'FR' | 'CH' | 'BE' | 'DE
 }
 
 /**
- * Optional URL param check for language/flag preferences without altering the fixed 5€ price.
+ * Optional URL param check for language/flag preferences without altering the fixed 7€ price.
  */
 export function detectFromUrlParams(): GeoDetectionResult | null {
   if (typeof window === 'undefined') return null;
@@ -115,7 +115,7 @@ export function detectFromCache(): GeoDetectionResult | null {
 }
 
 export function saveToCache(_countryCode: string, _rawCountry?: string): void {
-  // Localization caching removed to enforce uniform 5€ pricing
+  // Localization caching removed to enforce uniform 7€ pricing
 }
 
 export function detectFromBrowserHeuristics(): GeoDetectionResult {
@@ -136,7 +136,7 @@ export async function detectFromNetwork(): Promise<{ countryCode: 'FR' | 'CH' | 
 }
 
 /**
- * Returns fixed 5€ offer configuration.
+ * Returns fixed 7€ offer configuration.
  */
 export function getInitialGeoState(): GeoDetectionResult {
   const urlParam = detectFromUrlParams();
